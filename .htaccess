@@ -1,0 +1,49 @@
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # SEO: force HTTPS and non-www (301) — canonical host is https://socialmediafit.xyz
+  RewriteCond %{HTTP_HOST} ^www\. [OR]
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://socialmediafit.xyz%{REQUEST_URI} [R=301,L]
+
+  # Serve existing files and directories directly (includes /404.html,
+  # /og-image.jpg, /og-*.jpg, /assets/*, /guides/* and the 9 platform folders)
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # SPA fallback — ONLY for the app's own routes (homepage + 9 platform pages).
+  # Unknown paths fall through to the real 404 above instead of serving
+  # the homepage with HTTP 200 (soft 404).
+  RewriteCond %{REQUEST_URI} ^/$ [OR]
+  RewriteCond %{REQUEST_URI} ^/(tiktok-safe-zone-overlay|instagram-reels-safe-zone|youtube-shorts-cropper|facebook-safe-zone|linkedin-post-safe-zone|x-twitter-safe-zone|pinterest-pin-cropper|threads-safe-zone|bluesky-crop-tool)/?$
+  RewriteRule ^ /index.html [L]
+</IfModule>
+
+# Gzip / Deflate Compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json application/xml image/svg+xml
+</IfModule>
+
+# Browser Caching Headers
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 month"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+</IfModule>
+
+# Security Headers
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

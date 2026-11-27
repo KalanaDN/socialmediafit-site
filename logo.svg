@@ -1,0 +1,35 @@
+<svg viewBox="0 0 520 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Brand Icon (120x120 within left zone) -->
+  <g transform="translate(20, 20)">
+    <!-- 1. Top-Left: Cross with Arrow pointing RIGHT -->
+    <line x1="24" y1="12" x2="24" y2="44" stroke="#F59E0B" stroke-width="8" stroke-linecap="round"/>
+    <line x1="10" y1="28" x2="33" y2="28" stroke="#F59E0B" stroke-width="8" stroke-linecap="round"/>
+    <polygon points="45,28 30,17 30,39" fill="#F59E0B" stroke="#F59E0B" stroke-width="2.5" stroke-linejoin="round"/>
+
+    <!-- 2. Top-Right: Cross with Arrow pointing DOWN -->
+    <line x1="80" y1="28" x2="110" y2="28" stroke="#F59E0B" stroke-width="8" stroke-linecap="round"/>
+    <line x1="96" y1="12" x2="96" y2="35" stroke="#F59E0B" stroke-width="8" stroke-linecap="round"/>
+    <polygon points="96,49 85,34 107,34" fill="#F59E0B" stroke="#F59E0B" stroke-width="2.5" stroke-linejoin="round"/>
+
+    <!-- 3. Bottom-Right: Cross with Arrow pointing LEFT -->
+    <line x1="96" y1="76" x2="96" y2="108" stroke="#F59E0B" stroke-width="8" stroke-linecap="round"/>
+    <line x1="87" y1="92" x2="110" y2="92" stroke="#F59E0B" stroke-width="8" stroke-linecap="round"/>
+    <polygon points="75,92 90,81 90,103" fill="#F59E0B" stroke="#F59E0B" stroke-width="2.5" stroke-linejoin="round"/>
+
+    <!-- 4. Bottom-Left: Cross with Arrow pointing UP -->
+    <line x1="10" y1="92" x2="40" y2="92" stroke="#F59E0B" stroke-width="8" stroke-linecap="round"/>
+    <line x1="24" y1="85" x2="24" y2="108" stroke="#F59E0B" stroke-width="8" stroke-linecap="round"/>
+    <polygon points="24,71 13,86 35,86" fill="#F59E0B" stroke="#F59E0B" stroke-width="2.5" stroke-linejoin="round"/>
+
+    <!-- Center Elements -->
+    <circle cx="48" cy="46" r="6.5" fill="#F59E0B"/>
+    <rect x="64" y="39" width="16" height="14" rx="3" fill="#F59E0B"/>
+    <rect x="42" y="61" width="38" height="18" rx="3" fill="#F59E0B"/>
+    <path d="M 42 64 C 42 62.3 43.3 61 45 61 L 59 61 L 42 77 Z" fill="#FDE68A"/>
+  </g>
+
+  <!-- Typography -->
+  <text x="165" y="86" fill="#FFFFFF" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="44" font-weight="800" letter-spacing="-0.5">SocialMedia</text>
+  <text x="430" y="86" fill="#E5E7EB" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="44" font-weight="400" letter-spacing="-0.5">Fit</text>
+  <text x="167" y="116" fill="#9CA3AF" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="19" font-weight="500" letter-spacing="0.2">Crop. Resize. Optimize.</text>
+</svg>

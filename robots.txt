@@ -1,0 +1,6 @@
+# Robots.txt for SocialMediaFit (https://socialmediafit.xyz)
+User-agent: *
+Allow: /
+
+# Canonical XML Sitemap
+Sitemap: https://socialmediafit.xyz/sitemap.xml
